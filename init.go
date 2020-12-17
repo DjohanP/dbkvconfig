@@ -213,6 +213,10 @@ func (dbkv *DBKVCfg) GetConfig(key string) (interface{}, error) {
 
 // InsertConfig insert new config value without publish message
 func (dbkv *DBKVCfg) InsertConfig(key, value string) error {
+	_, err := dbkv.GetConfig(key)
+	if err == nil {
+		return fmt.Errorf(OnlyInsertNewConfig)
+	}
 	return dbkv.db.insertValueConfig(key, value)
 }
 

@@ -8,8 +8,9 @@ const (
 
 // Const For Error
 const (
-	ConfigNotFoundMsg = "ConfigNotFound"
-	UpdateTooFast     = "UpdateConfigIsTooFast"
+	ConfigNotFoundMsg   = "ConfigNotFound"
+	UpdateTooFast       = "UpdateConfigIsTooFast"
+	OnlyInsertNewConfig = "OnlyInsertNewConfig"
 )
 
 // Const Field Redis Without PubSub
