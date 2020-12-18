@@ -174,7 +174,6 @@ func (dbkv *DBKVCfg) listenRedisConfig() {
 		ticker = time.NewTicker(time.Duration(dbkv.watchInterval) * time.Millisecond)
 	)
 	go func() {
-		log.Println("InitGan")
 		defer ticker.Stop()
 		for {
 			// Waiting interval
